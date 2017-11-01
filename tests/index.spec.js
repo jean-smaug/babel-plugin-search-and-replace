@@ -1,5 +1,5 @@
 const babel = require("babel-core");
-const searchAndReplaceplugin = require("../src/index");
+const searchAndReplaceplugin = require("../lib/index");
 
 var example = `
 var foo = 1;
