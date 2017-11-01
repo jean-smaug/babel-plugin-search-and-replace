@@ -20,3 +20,9 @@ It replace string you choosed during babel runtime
     }]]
 }
 ```
+
+- Enjoy
+
+- And, that's all
+
+- Really that's all ;)
