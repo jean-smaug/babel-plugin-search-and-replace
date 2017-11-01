@@ -18,7 +18,7 @@ it("should replace nothing", () => {
   expect(code).toMatchSnapshot();
 });
 
-it("should replace foo by bar", () => {
+it("shouldn't replace foo by bar", () => {
   const { code } = babel.transform(example, {
     plugins: [
       [
@@ -32,7 +32,7 @@ it("should replace foo by bar", () => {
   expect(code).toMatchSnapshot();
 });
 
-it("should replace foo by bar and hello by hey", () => {
+it("should replace hello by hey", () => {
   const { code } = babel.transform(example, {
     plugins: [
       [
