@@ -11,9 +11,24 @@ const myFunc = function(param = "hello"){
 }
 `;
 
-it("should replace strings", () => {
+it("should replace nothing", () => {
   const { code } = babel.transform(example, {
     plugins: [searchAndReplaceplugin]
+  });
+  expect(code).toMatchSnapshot();
+});
+
+it("should replace foo by bar", () => {
+  const { code } = babel.transform(example, {
+    plugins: [
+      [
+        searchAndReplaceplugin,
+        {
+          option1: true,
+          option2: false
+        }
+      ]
+    ]
   });
   expect(code).toMatchSnapshot();
 });

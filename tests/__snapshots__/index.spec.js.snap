@@ -1,9 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should replace strings 1`] = `
+exports[`should replace foo by bar 1`] = `
 "
-var bar = 1;
-if (bar) console.log(bar);
+var foo = 1;
+if (foo) console.log(foo);
+const hello = \\"hello\\";
+
+const myFunc = function (param = \\"hello\\") {
+    return 1;
+};"
+`;
+
+exports[`should replace nothing 1`] = `
+"
+var foo = 1;
+if (foo) console.log(foo);
 const hello = \\"hello\\";
 
 const myFunc = function (param = \\"hello\\") {
