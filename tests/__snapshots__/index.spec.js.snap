@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should replace strings 1`] = `
+"
+var bar = 1;
+if (bar) console.log(bar);
+const hello = \\"hello\\";
+
+const myFunc = function (param = \\"hello\\") {
+    return 1;
+};"
+`;
