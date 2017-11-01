@@ -24,8 +24,22 @@ it("should replace foo by bar", () => {
       [
         searchAndReplaceplugin,
         {
-          option1: true,
-          option2: false
+          foo: "bar"
+        }
+      ]
+    ]
+  });
+  expect(code).toMatchSnapshot();
+});
+
+it("should replace foo by bar and hello by hey", () => {
+  const { code } = babel.transform(example, {
+    plugins: [
+      [
+        searchAndReplaceplugin,
+        {
+          foo: "bar",
+          hello: "hey"
         }
       ]
     ]

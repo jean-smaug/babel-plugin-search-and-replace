@@ -2,9 +2,20 @@
 
 exports[`should replace foo by bar 1`] = `
 "
-var foo = 1;
-if (foo) console.log(foo);
+var bar = 1;
+if (bar) console.log(bar);
 const hello = \\"hello\\";
+
+const myFunc = function (param = \\"hello\\") {
+    return 1;
+};"
+`;
+
+exports[`should replace foo by bar and hello by hey 1`] = `
+"
+var bar = 1;
+if (bar) console.log(bar);
+const hey = \\"hello\\";
 
 const myFunc = function (param = \\"hello\\") {
     return 1;
