@@ -23,9 +23,12 @@ it("shouldn't replace foo by bar", () => {
     plugins: [
       [
         searchAndReplaceplugin,
-        {
-          foo: "bar"
-        }
+        [
+          {
+            search: "foo",
+            replace: "bar"
+          }
+        ]
       ]
     ]
   });
@@ -37,10 +40,16 @@ it("should replace hello by hey", () => {
     plugins: [
       [
         searchAndReplaceplugin,
-        {
-          foo: "bar",
-          hello: "hey"
-        }
+        [
+          {
+            search: "foo",
+            replace: "bar"
+          },
+          {
+            search: "hello",
+            replace: "hey"
+          }
+        ]
       ]
     ]
   });
