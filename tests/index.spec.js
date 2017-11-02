@@ -55,3 +55,20 @@ it("should replace hello by hey", () => {
   });
   expect(code).toMatchSnapshot();
 });
+
+it("should replace fo by bar", () => {
+  const { code } = babel.transform(example, {
+    plugins: [
+      [
+        searchAndReplaceplugin,
+        [
+          {
+            search: /fo/,
+            replace: "bar"
+          }
+        ]
+      ]
+    ]
+  });
+  expect(code).toMatchSnapshot();
+});

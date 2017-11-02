@@ -10,9 +10,7 @@
     "tdd": "jest --watch"
   },
   "devDependencies": {
-    "jest": "21.2.1"
-  },
-  "dependencies": {
+    "jest": "21.2.1",
     "babel-core": "6.26.0"
   }
 }
