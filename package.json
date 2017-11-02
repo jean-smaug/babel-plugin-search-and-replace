@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-search-and-replace",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "main": "lib/index.js",
   "repository": "https://github.com/the-smaug/babel-plugin-search-and-replace",
   "author": "maxime blanc <maximeblanc.dev@gmail.com>",
@@ -10,9 +10,7 @@
     "tdd": "jest --watch"
   },
   "devDependencies": {
-    "jest": "21.2.1"
-  },
-  "dependencies": {
+    "jest": "21.2.1",
     "babel-core": "6.26.0"
   }
 }

@@ -15,11 +15,11 @@ It replace string you choosed during babel runtime
 {
     "plugins": [["search-and-replace", [
         {
-            "search": "foo",
-            "replace": "bar",
-        }, 
-        {
             "search": "searchedString",
+            "replace": "replacement"
+        },
+        {
+            "search": /myRegex/,
             "replace": "replacement"
         }
     ]]]
