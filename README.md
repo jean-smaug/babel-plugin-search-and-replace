@@ -13,11 +13,16 @@ It replace string you choosed during babel runtime
 
 ```json
 {
-    "plugins": [["search-and-replace", {
-        "search": "replace",
-        "search2": "replace2",
-        "foo": "bar"
-    }]]
+    "plugins": [["search-and-replace", [
+        {
+            "search": "foo",
+            "replace": "bar",
+        }, 
+        {
+            "search": "searchedString",
+            "replace": "replacement"
+        }
+    ]]]
 }
 ```
 
