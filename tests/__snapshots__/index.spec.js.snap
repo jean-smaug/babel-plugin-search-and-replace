@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should replace fo by bar 1`] = `
+exports[`should replace el by aze 1`] = `
 "
 var foo = 1;
 if (foo) console.log(foo);
-const hello = \\"hello\\";
+const hello = \\"hazelo\\";
 
-const myFunc = function (param = \\"hello\\") {
+const myFunc = function (param = \\"hazelo\\") {
     return 1;
 };"
 `;
