@@ -1,45 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should replace el by aze 1`] = `
-"
-var foo = 1;
+"var foo = 1;
 if (foo) console.log(foo);
 const hello = \\"hazelo\\";
 
 const myFunc = function (param = \\"hazelo\\") {
-    return 1;
+  return 1;
 };"
 `;
 
 exports[`should replace hello by hey 1`] = `
-"
-var foo = 1;
+"var foo = 1;
 if (foo) console.log(foo);
 const hello = \\"hey\\";
 
 const myFunc = function (param = \\"hey\\") {
-    return 1;
+  return 1;
 };"
 `;
 
 exports[`should replace nothing 1`] = `
-"
-var foo = 1;
+"var foo = 1;
 if (foo) console.log(foo);
 const hello = \\"hello\\";
 
 const myFunc = function (param = \\"hello\\") {
-    return 1;
+  return 1;
 };"
 `;
 
 exports[`shouldn't replace foo by bar 1`] = `
-"
-var foo = 1;
+"var foo = 1;
 if (foo) console.log(foo);
 const hello = \\"hello\\";
 
 const myFunc = function (param = \\"hello\\") {
-    return 1;
+  return 1;
 };"
 `;

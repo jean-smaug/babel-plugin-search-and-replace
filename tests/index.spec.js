@@ -1,4 +1,4 @@
-const babel = require("babel-core");
+const babel = require("@babel/core");
 const searchAndReplaceplugin = require("../lib/index");
 
 var example = `
@@ -23,12 +23,14 @@ it("shouldn't replace foo by bar", () => {
     plugins: [
       [
         searchAndReplaceplugin,
-        [
-          {
-            search: "foo",
-            replace: "bar"
-          }
-        ]
+        {
+          rules: [
+            {
+              search: "foo",
+              replace: "bar"
+            }
+          ]
+        }
       ]
     ]
   });
@@ -40,16 +42,18 @@ it("should replace hello by hey", () => {
     plugins: [
       [
         searchAndReplaceplugin,
-        [
-          {
-            search: "foo",
-            replace: "bar"
-          },
-          {
-            search: "hello",
-            replace: "hey"
-          }
-        ]
+        {
+          rules: [
+            {
+              search: "foo",
+              replace: "bar"
+            },
+            {
+              search: "hello",
+              replace: "hey"
+            }
+          ]
+        }
       ]
     ]
   });
@@ -61,12 +65,14 @@ it("should replace el by aze", () => {
     plugins: [
       [
         searchAndReplaceplugin,
-        [
-          {
-            search: /el/,
-            replace: "aze"
-          }
-        ]
+        {
+          rules: [
+            {
+              search: /el/,
+              replace: "aze"
+            }
+          ]
+        }
       ]
     ]
   });
