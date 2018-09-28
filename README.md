@@ -13,6 +13,24 @@ It replace string you choosed during babel runtime
 
 ```json
 {
+    "plugins": [["search-and-replace", {
+        rules: [
+            {
+                "search": "searchedString",
+                "replace": "replacement"
+            },
+            {
+                "search": /myRegex/,
+                "replace": "replacement"
+            }
+        ]
+    }]]
+}
+```
+
+For Babel < 7 use babel-plugin-search-and-replace@0.3.0
+```json
+{
     "plugins": [["search-and-replace", [
         {
             "search": "searchedString",
