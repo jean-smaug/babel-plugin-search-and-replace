@@ -4,8 +4,7 @@
 
 It replace string you choosed during babel runtime
 
-
-## How to use it ? 
+## How to use it ?
 
 - `yarn add babel-plugin-search-and-replace -DE` or `npm i babel-plugin-search-and-replace --save-dev --exact`
 
@@ -13,34 +12,45 @@ It replace string you choosed during babel runtime
 
 ```json
 {
-    "plugins": [["search-and-replace", {
-        rules: [
-            {
-                "search": "searchedString",
-                "replace": "replacement"
-            },
-            {
-                "search": /myRegex/,
-                "replace": "replacement"
-            }
+  "plugins": [
+    [
+      "search-and-replace",
+      {
+        "rules": [
+          {
+            "search": "searchedString",
+            "replace": "replacement"
+          },
+          {
+            "search": /myRegex/,
+            "replace": "replacement"
+          }
         ]
-    }]]
+      }
+    ]
+  ]
 }
 ```
 
 For Babel < 7 use babel-plugin-search-and-replace@0.3.0
+
 ```json
 {
-    "plugins": [["search-and-replace", [
+  "plugins": [
+    [
+      "search-and-replace",
+      [
         {
-            "search": "searchedString",
-            "replace": "replacement"
+          "search": "searchedString",
+          "replace": "replacement"
         },
         {
-            "search": /myRegex/,
-            "replace": "replacement"
+          "search": /myRegex/,
+          "replace": "replacement"
         }
-    ]]]
+      ]
+    ]
+  ]
 }
 ```
 
