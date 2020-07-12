@@ -19,6 +19,7 @@ It replace string you choosed during babel runtime
         "rules": [
           {
             "search": "searchedString",
+            "searchTemplateStrings": true,
             "replace": "replacement"
           },
           {
@@ -32,7 +33,7 @@ It replace string you choosed during babel runtime
 }
 ```
 
-For Babel < 7 use babel-plugin-search-and-replace@0.3.0
+For Babel < 7 use babel-plugin-search-and-replace@0.3.0 (does not support template strings)
 
 ```json
 {
