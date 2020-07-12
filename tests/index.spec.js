@@ -78,3 +78,54 @@ it("should replace el by aze", () => {
   });
   expect(code).toMatchSnapshot();
 });
+
+
+var exampleWithTemplates = `
+var foo = 1;
+if (foo) console.log(foo);
+const bye = \`bye\${foo}\`;
+
+const myFunc = function(param = \`bye\${foo}\`){
+    return 1;
+}
+`;
+
+it("should replace bye for adios", () => {
+  const { code } = babel.transform(exampleWithTemplates, {
+    plugins: [
+      [
+        searchAndReplaceplugin,
+        {
+          rules: [
+            {
+              search: 'bye',
+              searchTemplateStrings: true,
+              replace: "adios",
+            }
+          ]
+        }
+      ]
+    ]
+  });
+  expect(code).toMatchSnapshot();
+});
+
+it("should replace ye by aby", () => {
+  const { code } = babel.transform(exampleWithTemplates, {
+    plugins: [
+      [
+        searchAndReplaceplugin,
+        {
+          rules: [
+            {
+              search: /ye/,
+              searchTemplateStrings: true,
+              replace: "aby",
+            }
+          ]
+        }
+      ]
+    ]
+  });
+  expect(code).toMatchSnapshot();
+});
