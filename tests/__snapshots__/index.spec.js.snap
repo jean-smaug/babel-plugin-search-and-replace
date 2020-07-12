@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should replace bye for adios 1`] = `
+"var foo = 1;
+if (foo) console.log(foo);
+const bye = \`adios\${foo}\`;
+
+const myFunc = function (param = \`adios\${foo}\`) {
+  return 1;
+};"
+`;
+
 exports[`should replace el by aze 1`] = `
 "var foo = 1;
 if (foo) console.log(foo);
@@ -26,6 +36,16 @@ if (foo) console.log(foo);
 const hello = \\"hello\\";
 
 const myFunc = function (param = \\"hello\\") {
+  return 1;
+};"
+`;
+
+exports[`should replace ye by aby 1`] = `
+"var foo = 1;
+if (foo) console.log(foo);
+const bye = \`baby\${foo}\`;
+
+const myFunc = function (param = \`baby\${foo}\`) {
   return 1;
 };"
 `;
