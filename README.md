@@ -1,10 +1,10 @@
 # babel-plugin-search-and-replace
 
-## What it does ?
+## What it does
 
-It replace string you choosed during babel runtime
+It replaces specified string literals
 
-## How to use it ?
+## How to use it
 
 - `yarn add babel-plugin-search-and-replace -DE` or `npm i babel-plugin-search-and-replace --save-dev --exact`
 
