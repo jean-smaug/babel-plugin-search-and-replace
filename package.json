@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-search-and-replace",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "lib/index.js",
   "repository": "https://github.com/the-smaug/babel-plugin-search-and-replace",
   "author": "maxime blanc <maximeblanc.dev@gmail.com>",
